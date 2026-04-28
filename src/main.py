@@ -68,7 +68,6 @@ def search_lyric(artist, music):
         return response.json().get('lyrics', '') if response.status_code == 200 else ''
     except: return ''
 
-# --- INTERFACE ---
 st.image('https://i.pinimg.com/736x/e2/06/1e/e2061e114a9cf95c89e05d9f14c9a7f2.jpg')
 st.title('Music Lyrics')
 
@@ -116,7 +115,6 @@ if search:
             st.error('Error, music not found.')
             st.session_state.search_results = None
 
-# --- EXIBIÇÃO ---
 if st.session_state.search_results:
     st.divider()
 
