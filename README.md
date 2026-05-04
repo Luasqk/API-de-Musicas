@@ -2,13 +2,13 @@
 
 Search for lyrics, watch YouTube videos, and manage your own playlist in one place.
 
-![App Preview](img.png)
+![img.png](img.png)
 
 ## ✨ Features
 *   **Search:** Find lyrics by artist and song name.
 *   **Watch:** Integrated YouTube player.
 *   **Save:** Add your favorite songs to a local playlist.
-![Interface](img_1.png)
+![img_1.png](img_1.png)
 
 ## 🚀 Quick Start
 
