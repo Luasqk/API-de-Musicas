@@ -7,6 +7,13 @@ import json
 st.markdown(
     """
     <style>
+    /* Remove o espaçamento excessivo no topo */
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+        margin-top: -2rem;
+    }
+
     .stApp, .stAppViewContainer, header[data-testid="stHeader"] {
         background-color: #000000 !important;
     }
@@ -68,8 +75,8 @@ def search_lyric(artist, music):
         return response.json().get('lyrics', '') if response.status_code == 200 else ''
     except: return ''
 
-st.image('https://i.pinimg.com/736x/e2/06/1e/e2061e114a9cf95c89e05d9f14c9a7f2.jpg')
-st.title('Music Lyrics')
+st.image('https://i.pinimg.com/736x/e2/06/1e/e2061e114a9cf95c89e05d9f14c9a7f2.jpg', width=700)
+st.markdown("<h1 style='text-align: center;'>Music Lyrics</h1>", unsafe_allow_html=True)
 
 artist_input = st.text_input('Type the artist name: ', key='artist')
 music_input = st.text_input('Type the music name: ', key='music')
@@ -140,5 +147,6 @@ if st.session_state.search_results:
         st.video(st.session_state.search_results['url'])
 
     st.markdown("### Lyrics")
-    # Usando st.text para manter a formatação original da letra
     st.text(st.session_state.search_results['lyric'])
+
+    #streamlit run main.py
